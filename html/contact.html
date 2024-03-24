@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fitness First</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/contact.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <!-- icône dans l'onglet -->
+        <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    </head>
+    <body>
+       <!-- header -->
+        <header>
+        <nav>
+          <div class="logo">
+            <img src="../images/logo.png" />
+          </div>
+          
+          <ul class="list-item">
+            <li class="active"><a href="./index.html">Acceuil</a></li>
+            <li><a href="./activite.html">Activités</a></li>
+            <li><a href="./planning.html">Planning</a></li>
+            <li><a href="./tarif.html">Tarif</a></li>
+            <li><a href="./bienEtre.html">Blog</a></li>
+            <li><a href="./contact.html">Contacts</a></li>
+            <li><a href="./login.html"><i class="fa fa-user"></i></a></li>
+          </ul>
+        </nav>
+        </header>
+
+        <div class="container-page">
+            <div class="heading text-center">
+              <h2>Contact
+                  <span> Us </span>
+              </h2>
+            </div>
+            <form class="contacts" id="forum">
+                <div class="input-control">
+                  <input type="text" id ="nom" placeholder="Nom" ><br/> 
+                  <p style="color:red;" id="erreur1"></p>
+                </div>
+                <div class="input-control">
+                  <input type="text"  id ="prenom" placeholder="Prenom" ><br/>
+                  <p style="color:red;" id="erreur2"></p>
+                </div>
+                <div class="input-control">
+                    <input id="mail" type="text" placeholder="E-mail" ><br/>
+                    <p style="color:red;" id="erreur3"></p>
+                </div>
+                <div class="input-control">
+                    <input  id="tel" type="text" placeholder="Tel" ><br/>
+                    <p style="color:red;" id="erreur4"></p>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control-contact" rows="5" id="message" placeholder="Message"></textarea>
+                  <p style="color:red;" id="erreur5"></p>
+                </div>
+                <button class="contacts-button" type="submit" onclick=verifier()>Envoyer</button>
+                </form>
+          </div>
+        <script>
+
+            function isAlpha(ch)
+            {
+                ch=ch.toUpperCase();
+                i=0;
+                while (i< ch.length && "A"<=ch.charAt(i) && ch.charAt(i)<="Z" ){
+                    i++;
+                }
+                return i==ch.length;
+            }
+            function verifier(){
+                let Nom=document.getElementById("nom");
+                let Prenom=document.getElementById("prenom");
+                let email=document.getElementById("mail");
+                let tel=document.getElementById("tel");
+                //var message=document.getElementById("message");
+
+                    if(Nom.length<3 || !isAlpha(Nom))
+                    {
+                       alert("veuillez introduire le nom");
+                       return false ;
+                    }
+                    if(Prenom.length<3 || !isAlpha(Prenom))
+                    {
+                       alert("veuillez introduire le prenom");
+                       return false ;
+                    }
+                    if (tel.length!=8 || isNaN(tel))
+                    { 
+                        alert("veuillez introduire le numéro de tel ");
+                        return false;
+                    }
+            }
+          document.getElementById("forum").addEventListener("submit", async function(e){
+                    e.preventDefault();
+                    var erreur1 ="";
+                    var erreur2 ="";
+                    var erreur3 ="";
+                    var erreur4 ="";
+                    var erreur5 ="";
+
+                    var nom=document.getElementById("nom");
+                    var prenom=document.getElementById("prenom");
+                    var email=document.getElementById("mail");
+                    var tel=document.getElementById("tel");
+                    var message=document.getElementById("message");
+
+                    if (!nom.value) {
+                        erreur1 = "ce champ est obligatoire";
+                    }  if (!prenom.value) {
+                       erreur2 = "ce champ est obligatoire";
+                    }  if (!email.value) {
+                       erreur3 = "ce champ est obligatoire";
+                    }if (!tel.value) {
+                       erreur4 = "ce champ est obligatoire";
+                    }if (!message.value) {
+                       erreur5 = "ce champ est obligatoire";
+                    }
+                    document.getElementById("erreur1").innerHTML = erreur1;
+                    document.getElementById("erreur2").innerHTML = erreur2;
+                    document.getElementById("erreur3").innerHTML = erreur3;
+                    document.getElementById("erreur4").innerHTML = erreur4;
+                    document.getElementById("erreur5").innerHTML = erreur5;
+
+                    if (erreur1 || erreur2 || erreur3 || erreur4 || erreur5|| ! await verifier()) {
+                       return false;
+                    } else {
+                        alert("Votre message a été envoyé avec succès.");
+                    }
+                });
+    </script>
+        <footer class="footer">
+            <div class="footer-top section">
+               <div class="container">
+                    <div class="footer-link-box">
+                        <ul class="footer-list">
+                            <li><p class="footer-list-title"> Horaire </p></li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-calendar"></i> Lundi - Vendredi : 6:30-22:00h </span>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-calendar"></i> Samedi : 6:30-17:00h </span>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-calendar"></i> Dimanche : 6:30-12:00h </span>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li>
+                                <p class="footer-list-title">Contactez-nous </p>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-map-marker"></i> Adresse: Rue 14 Janvier 7000 Bizerte,Tunisie </span>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-envelope-o"></i> E-mail: fitnessfirst@gmail.com</span></br>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-phone" ></i> Tel : 98 300 010</span>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+    
+                        <li>
+                            <p class="footer-list-title">Liens rapides </p>
+                        </li>
+      
+                        <li>
+                            <a href="./activite.html" class="footer-link">
+                            <span class="footer-link-text">Activités</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./tarif.html" class="footer-link">
+                            <span class="footer-link-text"> Offres </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./planning.html" class="footer-link">
+                            <span class="footer-link-text">Programme </span>
+                            </a>
+                       </li>
+                       <li>
+                        <a href="./planning.html" class="footer-link">
+                        <span class="footer-link-text">Programme </span>
+                        </a>
+                   </li>
+                       </ul>
+          
+                        <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Suivez Nous</p>
+                        </li>
+                        <li class="social-links ">   
+                            <a href="https://www.facebook.com/FitnessFirstBizerte"> <i class="fa fa-facebook-f" style="font-size:36px" color="blue"></i></a>
+                            <a href="https://www.instagram.com/fitness_first_bizerte/"> <i class="fa fa-instagram" style="font-size:36px"></i></a>
+                        </li>
+                        <li>
+                            <spam class="footer-link-text">
+                                <i class="fa fa-envelope-o"></i>  <a href="contact.html"> Nous contacter</a>
+                            </spam>
+                        </li>
+                        </ul>
+                    
+                    </div>
+    
+                </div>
+                <div class="footer-bottom">
+                    &copy; Fitness First . Tous droits réservés
+                </div>
+            </div>
+        </footer>
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,278 @@
+html,
+body {
+	height: 100%;
+	font-family: "Nunito Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: #111111;
+	font-weight: 400;
+	font-family: "Nunito Sans", sans-serif;
+}
+p {
+	font-size: 15px;
+	font-family: "Nunito Sans", sans-serif;
+	color: #3d3d3d;
+	font-weight: 400;
+	line-height: 25px;
+	margin: 0 0 15px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+    background-color: #ffffff;
+    
+}
+/*   Start navigation bar   */
+nav {
+    height: 80px;
+    background: #ffffff;
+}
+.logo {
+    padding: 10px;
+    width: auto;
+    float: left;
+}
+.logo img {
+    height: 80px;
+
+}
+
+.list-item {
+    float: right;
+    margin-right: 25px;
+    margin-top: 17px;
+    padding: 2px 0;
+}
+
+.list-item li {
+	list-style: none;
+	font-size: 20px;
+	color: #111111;
+	padding: 2px 15px;
+	cursor: pointer;
+    float: left;
+    transition: all .7s ease-in-out;
+}
+
+.list-item li a {
+    font-size: 18px;
+	color: #111111;
+	display: block;
+	font-weight: 600;
+	position: relative;
+	padding: 3px 0;
+	text-decoration: none;
+	
+}
+
+.list-item li a:after {
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: blueviolet;
+	content: "";
+	-webkit-transition: all, 0.5s;
+	-o-transition: all, 0.5s;
+	transition: all, 0.5s;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+}
+
+.list-item li.active a:after {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.list-item li:hover a:after {
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+
+.header-icon {
+    text-align: right;
+	display: inline-block;
+	margin-right: 26px;
+	position: relative;
+}
+
+
+
+
+
+
+
+  
+
+/* FOOTER */
+
+
+.footer-top { background: rgb(242, 242, 242); }
+.footer-link-box{
+    display:flex;
+}
+
+.footer-brand {
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--gainsboro);
+  margin-bottom: 50px;
+}
+
+.footer-brand .logo { margin-bottom: 15px; }
+
+.footer-list{
+    list-style: none;
+    flex-direction: column;
+    margin: 2%;
+}
+
+
+.footer-list-title {
+  position: relative;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.footer-list-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  margin-top: 10px;
+}
+
+.footer-link {
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 6px;
+  transition: var(--transition-1);
+}
+
+a.footer-link:is(:hover, :focus) { 
+    color: black; 
+}
+
+.footer-link-text { 
+    flex: 1;
+    font-size: 16px;
+    color: black;
+ }
+
+.footer-list:not(:last-child) { margin-bottom: 30px; }
+
+.footer-list:first-child  {
+  color: black;
+  font-size: 22px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    padding-block: 6px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px ;
+}
+
+.social-links li {
+    margin-right: 10px; 
+}
+
+.footer-bottom {
+    background-color: #222; 
+    padding: 10px 0;
+    text-align: center;
+	color:#ffffff;
+}
+
+.footer-bottom-text {
+    font-size: 0.9rem; 
+}
+
+
+
+
+/* Footer styles 
+.footer {
+    background-color: #ffffff; 
+    color: black; 
+    padding: 50px 0; /
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.footer-top {
+    padding-bottom: 30px; 
+}
+
+.footer-link-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px; 
+}
+
+.footer-column-title {
+    font-size: 1.2rem; 
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-link-text {
+    color: black; 
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.social-links li {
+    margin-right: 10px; 
+}
+
+.footer-bottom {
+    background-color: #222; 
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom-text {
+    font-size: 0.9rem; 
+}*/

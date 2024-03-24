@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fitness First</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <!-- icône dans l'onglet -->
+        <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    </head>
+    <body>
+       <!-- header -->
+        <header>
+        <nav>
+          <div class="logo">
+            <img src="../images/logo.png" />
+          </div>
+          
+          <ul class="list-item">
+            <li class="active"><a href="./index.html">Acceuil</a></li>
+            <li><a href="./activite.html">Activités</a></li>
+            <li><a href="./planning.html">Planning</a></li>
+            <li><a href="./tarif.html">Tarif</a></li>
+            <li><a href="./bienEtre.html">Blog</a></li>
+            <li><a href="./contact.html">Contacts</a></li>
+            <li><a href="./login.html"><i class="fa fa-user"></i></a></li>
+          </ul>
+        </nav>
+        </header>
+
+        <section>
+            <div class="container-page">
+                <div class="heading text-center">
+                  <h2>LOGIN TO YOUR ACCOUNT
+                  </h2>
+                </div>
+            
+            <form id="forum" style="padding:50px 20px;">
+                <div class="input-control-login">
+                    <input type="text" name="email" id ="email" placeholder="E-mail" ><br/> 
+                    <p style="color:red;" id="erreur1"></p>
+                </div>
+                <div class="input-control-login">
+                    <input type="password" name="pwrd" id ="pwrd" placeholder="Password" ><br/> 
+                    <p style="color:red;" id="erreur2"></p>
+                </div>
+                <div class="login-button">
+                    <button class="contacts-button" type="submit"> Sign In</button>
+                </div>
+                <p class="paragraph-text">Don't have an account? <a href="./register.html" class="link-text">Sign Up</a></p>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById("forum").addEventListener("submit",function(e){
+            e.preventDefault();
+            var erreur1 ="";
+            var erreur2 ="";
+    
+            var email=document.getElementById("email");
+            var pwd=document.getElementById("pwrd");
+            if (!email.value) {
+               erreur1 = "Email is required";
+            }  if (!pwd.value) {
+                erreur2 = "Password is required";
+            }
+                        
+            document.getElementById("erreur1").innerHTML = erreur1;
+            document.getElementById("erreur2").innerHTML = erreur2;
+                    
+    
+            if (erreur1 || erreur2) {
+                return false;
+            } else {
+                alert("You are successfully logged in");
+            }
+        });
+    
+    </script>
+
+
+        <footer class="footer">
+            <div class="footer-top section">
+               <div class="container">
+                    <div class="footer-link-box">
+                        <ul class="footer-list">
+                            <li><p class="footer-list-title"> Horaire </p></li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-calendar"></i> Lundi - Vendredi : 6:30-22:00h </span>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-calendar"></i> Samedi : 6:30-17:00h </span>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-calendar"></i> Dimanche : 6:30-12:00h </span>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+                            <li>
+                                <p class="footer-list-title">Contactez-nous </p>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-map-marker"></i> Adresse: Rue 14 Janvier 7000 Bizerte,Tunisie </span>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-envelope-o"></i> E-mail: fitnessfirst@gmail.com</span></br>
+                            </li>
+                            <li>
+                                <span class="footer-link-text"><i class="fa fa-phone" ></i> Tel : 98 300 010</span>
+                            </li>
+                        </ul>
+                        <ul class="footer-list">
+    
+                        <li>
+                            <p class="footer-list-title">Liens rapides </p>
+                        </li>
+      
+                        <li>
+                            <a href="./activite.html" class="footer-link">
+                            <span class="footer-link-text">Activités</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./tarif.html" class="footer-link">
+                            <span class="footer-link-text"> Offres </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./planning.html" class="footer-link">
+                            <span class="footer-link-text">Programme </span>
+                            </a>
+                       </li>
+                       <li>
+                        <a href="./planning.html" class="footer-link">
+                        <span class="footer-link-text">Programme </span>
+                        </a>
+                   </li>
+                       </ul>
+          
+                        <ul class="footer-list">
+                        <li>
+                            <p class="footer-list-title">Suivez Nous</p>
+                        </li>
+                        <li class="social-links ">   
+                            <a href="https://www.facebook.com/FitnessFirstBizerte"> <i class="fa fa-facebook-f" style="font-size:36px" color="blue"></i></a>
+                            <a href="https://www.instagram.com/fitness_first_bizerte/"> <i class="fa fa-instagram" style="font-size:36px"></i></a>
+                        </li>
+                        <li>
+                            <spam class="footer-link-text">
+                                <i class="fa fa-envelope-o"></i>  <a href="contact.html"> Nous contacter</a>
+                            </spam>
+                        </li>
+                        </ul>
+                    
+                    </div>
+    
+                </div>
+                <div class="footer-bottom">
+                    &copy; Fitness First . Tous droits réservés
+                </div>
+            </div>
+        </footer>
+        <script src="" async defer></script>
+    </body>
+</html>

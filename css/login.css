@@ -1,0 +1,47 @@
+/* LOGIN */
+
+.input-control-login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.input-control-login input{
+    border:2px solid #ededed;
+    border-radius :10px;
+    font-size: 13px;
+    padding:20px;
+    width: 30%;
+    align-self: center;
+    font-family: monospace;
+
+}
+.login-button{
+    text-align: center;
+}
+
+.paragraph-text {
+    font-size: 18px;
+    color: #6d6d6d;
+    margin-top: 20px;
+}
+
+.link-text {
+    text-decoration: none;
+    color: #e53637 !important;
+    font-weight: bold;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+.contacts-button{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 2px solid #ededed;
+    background: #e53637;
+    color: #ffffff;
+    margin: 20px;
+}
